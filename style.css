@@ -22,8 +22,7 @@ Version   : v.0.0
 
 /* Global */
 body {
-  /* background-color: var(--light-gray); */
-  background-color: red;
+  background-color: var(--light-gray);
   font-family: "Outfit", sans-serif;
   /* display: grid;
   grid: auto / repeat(9, 1fr);
