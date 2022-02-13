@@ -1,8 +1,9 @@
 /* --------------------------------------------
-Project   : QR Code Component (Frontend Mentor)
-Author    : Langit Amaravati
-Author URI: https://www.langitamaravati.com
-Version   : v.0.0
+Project    : QR Code Component
+Decription : A solution to Frontend Mentor Challenge
+Author     : Langit Amaravati
+Author URI : https://www.langitamaravati.com
+Version    : v.0.0
 -------------------------------------------- */
 
 /* Reset */
@@ -26,17 +27,7 @@ body {
   font-family: "Outfit", sans-serif;
   height: 100vh;
   display: grid;
-  /* grid: 100vh / repeat(12, 1fr); */
-  /* grid-template-column: repeat(12, 1fr),
-  grid-template-rows: 90vw 10vh;
-  grid-gap: 10px; */
-  /* height: 100vh; */
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center; */
-  grid-template-columns: repeat(3, 1fr);
-  /* grid-template-rows: 10vh 80vh 10vh; */
+  grid: repeat(3, 1fr) / repeat(3, 1fr);
 }
 
 p {
@@ -62,9 +53,8 @@ p {
   box-shadow: 5px 5px 20px hsl(220, 15%, 70%);
 }
 
-.qr-title {
+.section-qr__title {
   margin-top: 30px;
-  font-size: 2.5rem;
   margin-bottom: 10px;
   color: var(--dark-blue);
 }
@@ -97,14 +87,17 @@ footer {
     flex-basis: 70%;
   }
 
-  .qr-title {
+  .section-qr__title {
     font-size: 1.2rem;
   }
 }
 
 @media only screen and (min-width: 768.88px) and (max-width: 991.98px) {
   .section-qr {
-    flex-basis: 60%;
+    flex-basis: 50%;
+  }
+  .section-qr__title {
+    font-size: 1.5rem;
   }
 }
 
@@ -113,7 +106,7 @@ footer {
     flex-basis: 25%;
   }
 
-  .qr-title {
+  .section-qr__title {
     font-size: 1.5rem;
   }
 }

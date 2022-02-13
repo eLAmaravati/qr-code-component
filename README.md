@@ -11,7 +11,6 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 
 ## Overview
@@ -39,23 +38,31 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 Goal-nya adalah membuat komponen QR code dengan tinggi dan lebar tertentu. Bagian paling tricky adalah menempatkan komponen tersebut tepat di tengah-tengah halaman sedangkan atribut tetap berada di bawah.
 
-Ada solusi yang lebih sederhana: flexbox. Tapi karena sekarang masih melatih grid (lagi), maka saya menggunakan grid. Kali ini tidak menggunakan property grid-templates-areas, tapi langsung grid. Membagi halaman (dalam hal ini body) ke dalam 9 kolom dan dua baris.
+Karena sekarang masih melatih grid (lagi), maka saya menggunakan grid dan membuat solusi seperti ini:
 
-Tantangan lainnya adalah mengatur tinggi dan lebar komponen qr code. Apakah harus menggunakan satuan relatif atau absolut? Saya memutuskan untuk menggunakan absolut (px).
+- Membagi body ke dalam 3 kolom dan 3 baris. Height dan max-height tidak ditentukan.
+- Membiarkan baris pertama untuk ruang kosong karena tinggi konten utama tidak diketahui (auto).
+- Menempatkan main container (konten utama) di baris pertama, penuh 3 kolom.
+- Menempatkan footer di baris ketiga, penuh 3 kolom. Dengan begini, footer akan tetap berada di bawah konten tak peduli berapa pun ukuran layarnya.
+
+Main container:
+
+- Display flex dan mengatur lebar konten sesuai dengan breakpoints menggunakan flex-basis.
 
 ```css
 body {
   background-color: var(--light-gray);
   font-family: "Outfit", sans-serif;
+  height: 100vh;
   display: grid;
-  grid: auto / repeat(9, 1fr);
-  grid-gap: 10px;
+  grid: repeat(3, 1fr) / repeat(3, 1fr);
 }
 ```
 
 ### Continued development
 
-Menambahkan display grid ke body sepertinya bukan best practise jika diterapkan di riil web development.
+- Saya masih ragu apakah menggunakan grid langsung di body merupakan best practise?
+- Menggunakan shorthand untuk property grid agar CSS lebih ringkas.
 
 ## Author
 
