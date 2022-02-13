@@ -1,0 +1,96 @@
+/* --------------------------------------------
+Project   : QR Code Component (Frontend Mentor)
+Author    : Langit Amaravati
+Author URI: https://www.langitamaravati.com
+Version   : v.0.0
+-------------------------------------------- */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root */
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(212, 45%, 89%);
+  --grayish-blue: hsl(220, 15%, 55%);
+  --dark-blue: hsl(218, 44%, 22%);
+}
+
+/* Global */
+body {
+  /* background-color: var(--light-gray); */
+  background-color: red;
+  font-family: "Outfit", sans-serif;
+  /* display: grid;
+  grid: auto / repeat(9, 1fr);
+  grid-gap: 10px; */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+p {
+  font-size: 15px;
+  color: var(--grayish-blue);
+}
+
+.main-container {
+  /* grid-column: 1 / 10;
+  grid-row: 1;
+  height: 90vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+/* Qr Section */
+.section-qr {
+  text-align: center;
+  background-color: var(--white);
+  padding: 20px 20px 40px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px hsl(220, 15%, 70%);
+  /* height: 450px;
+  width: 300px; */
+  height: auto;
+  width: 300px;
+}
+
+/* .section-qr__img img {
+  width: 300px;
+} */
+
+.qr-title {
+  margin-top: 30px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: var(--dark-blue);
+}
+
+/* Atribution */
+footer {
+  font-size: 11px;
+  padding: 20px;
+  grid-column: 1 / 10;
+  /* height: 10vh; */
+}
+
+.attribution {
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.img-qr {
+  width: 100%;
+  height: auto;
+}
